@@ -1,1 +1,79 @@
-/*Maak hier jouw CSS!*/
+.grid-container {
+    background-color: #ffe8d6;
+    color: white;
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 66px 240px auto 66px;
+    grid-template-areas:
+            "header aside-b aside-b"
+            "main aside-b aside-b"
+            "main aside-c aside-d"
+            "footer footer footer";
+}
+    .grid-item {
+        background-color: #e07a5f;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .grid-header {
+    grid-area: header;
+        margin: 16px 16px 0 16px;
+        align-items: center;
+
+    }
+
+    .grid-main {
+        grid-area: main;
+        margin:0 16px 0 16px;
+
+    }
+
+    .grid-aside-b {
+     grid-area: aside-b;
+        margin:16px 16px 0 16px;
+        align-items: center;
+
+    }
+
+    .grid-aside-c {
+        grid-area: aside-c;
+        margin:0 16px 0 16px;
+        align-items: center;
+
+    }
+    .grid-aside-d {
+        grid-area: aside-d;
+        margin:0 16px 100px 0;
+        align-items: center;
+        align-content: flex;
+
+    }
+    .grid-footer{
+        grid-area: footer;
+        margin: 0 16px 20px 16px;
+        align-items: center;
+    }
+@media screen and (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 66px auto 66px 66px 66px 66px;
+        grid-template-areas:
+            "header"
+            "main"
+            "aside-b"
+            "aside-d"
+            "aside-c"
+            "footer";
+    }
+
+
+
+
+
+
+
+
